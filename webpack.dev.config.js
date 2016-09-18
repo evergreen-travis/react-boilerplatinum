@@ -26,8 +26,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin(Object.assign({}, config, {
-      template: require('html-webpack-template'),
-      alwaysWriteToDisk: true
+      template: path.resolve('index.ejs'),
+      alwaysWriteToDisk: true,
+      files: {
+        css: [
+          'https://fonts.googleapis.com/icon?family=Material+Icons'
+        ]
+      }
     })),
     new HtmlWebpackHarddiskPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -52,6 +57,10 @@ module.exports = {
       }
     )
   ],
+  sassLoader: {
+    data: '@import "theme/_config.scss";',
+    includePaths: [path.resolve('src/app')]
+  },
   module: {
     loaders: [{
       test: /(\.js|\.jsx)$/,
@@ -60,7 +69,7 @@ module.exports = {
       include: path.resolve('src/app')
     }, {
       test: /(\.scss|\.css)$/,
-      loader: 'style!css!postcss!sass'
+      loader: 'style!css?modules&importLoaders=1!postcss!sass'
     }]
   },
   postcss: [autoprefixer]

@@ -1,3 +1,35 @@
-.menu {
-  background-color: red;
+@import '~react-toolbox/lib/commons';
+@import "~react-toolbox/components/app_bar/config";
+@import "~react-toolbox/components/button/config";
+
+$offset: 1.8 * $unit;
+
+.app {
+  @include no-webkit-scrollbar;
+  padding: ($appbar-height + 2) $offset $offset;
+}
+
+.appbar {
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// $color-white
+
+.search {
+  flex-grow: 1;
+  color: white;
+
+  > input,
+  > span {
+    color: $button-neutral-color-hover;
+    &:focus {
+      color: $color-white;
+    }
+  }
 }

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Container } from 'rebass'
+import { Input, BottomNavigationItem, BottomNavigation, Checkbox, AppBar, IconButton, Panel, NavDrawer, Layout } from 'react-toolbox'
+import { Flex, Box } from 'reflexbox'
 
-import FilterMenu from '../FilterMenu'
-import Header from '../Header'
-import Menu from '../Menu'
+import Logo from '../Logo'
 
-import style from './style.scss'
+import style from './style'
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -16,7 +15,7 @@ import style from './style.scss'
 
 class App extends Component {
   state = {
-    menuOpen: true,
+    menuActive: false,
     menuFilterOpen: false
   }
 
@@ -35,11 +34,22 @@ class App extends Component {
     const { toggle, get } = this
 
     return (
-      <Container>
-        <Header toggle={toggle} />
-        <Menu get={get} style={style.menu} />
-        <FilterMenu get={get} />
-      </Container>
+      <Layout>
+        <AppBar
+          className={style.center}
+          fixed
+          flat
+          center>
+          <IconButton icon='menu' inverse={true} />
+          <Input
+            className={style.search}
+            type='text'
+            name='search'
+            icon='search'
+            withIcon/>
+          <IconButton icon='filter_list' inverse={true} />
+        </AppBar>
+      </Layout>
     )
   }
 }
