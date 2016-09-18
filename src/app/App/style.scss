@@ -1,6 +1,7 @@
-@import '~react-toolbox/lib/commons';
+@import '~react-toolbox/lib/commons'; // colors, globals, mixins, normalize
 @import "~react-toolbox/components/app_bar/config";
 @import "~react-toolbox/components/button/config";
+@import "./config";
 
 $offset: 1.8 * $unit;
 
@@ -19,8 +20,6 @@ $offset: 1.8 * $unit;
   justify-content: space-between;
 }
 
-// $color-white
-
 .search {
   flex-grow: 1;
   color: white;
@@ -32,4 +31,25 @@ $offset: 1.8 * $unit;
       color: $color-white;
     }
   }
+}
+
+.menu {
+  z-index: $z-index-higher;
+  display: flex;
+  min-height: $appbar-height;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  // box-shadow: $appbar-shadow;
+  position: fixed;
+  top: $appbar-height;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-high;
+  box-shadow: $documentation-left-shadow;
+  transition: transform $animation-duration $animation-curve-default;
+}
+
+.main {
+  padding-left: 35rem;
 }

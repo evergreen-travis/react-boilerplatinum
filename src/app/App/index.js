@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, BottomNavigationItem, BottomNavigation, Checkbox, AppBar, IconButton, Panel, NavDrawer, Layout } from 'react-toolbox'
+import { Sidebar, Input, BottomNavigationItem, BottomNavigation, Checkbox, AppBar, IconButton, Panel, NavDrawer, Layout } from 'react-toolbox'
 import { Flex, Box } from 'reflexbox'
 
 import Logo from '../Logo'
@@ -15,7 +15,7 @@ import style from './style'
 
 class App extends Component {
   state = {
-    menuActive: false,
+    menuActive: true,
     menuFilterOpen: false
   }
 
@@ -34,7 +34,16 @@ class App extends Component {
     const { toggle, get } = this
 
     return (
-      <Layout>
+      <Layout className={style.app}>
+        <NavDrawer
+          className={style.menu}
+          active
+          pinned
+          permanentAt='xxxl'>
+          <p>
+            Navigation, account switcher, etc. go here.
+          </p>
+        </NavDrawer>
         <AppBar
           className={style.center}
           fixed
@@ -45,10 +54,29 @@ class App extends Component {
             className={style.search}
             type='text'
             name='search'
-            icon='search'
-            withIcon/>
+            icon='search' />
           <IconButton icon='filter_list' inverse={true} />
         </AppBar>
+        <article className={style.main}>
+          <section>
+            <h1>Main Content 0</h1>
+            <p>
+              Main content goes here.
+            </p>
+            <Checkbox label='Pin drawer' checked={this.state.drawerPinned} onChange={this.toggleDrawerPinned} />
+            <Checkbox label='Show sidebar' checked={this.state.sidebarPinned} onChange={this.toggleSidebar} />
+          </section>
+        </article>
+        <Sidebar pinned={this.state.sidebarPinned} width={5}>
+          <header>
+            <IconButton icon='close' onClick={this.toggleSidebar} />
+          </header>
+          <section style={{ flex: 1 }}>
+            <p>
+              Supplemental content goes here.
+            </p>
+          </section>
+        </Sidebar>
       </Layout>
     )
   }
