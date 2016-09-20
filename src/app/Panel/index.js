@@ -1,16 +1,13 @@
 import React from 'react'
+import { Panel, Checkbox } from 'react-toolbox'
+
 import style from './style'
 import Chip from '../Chip'
-import { Panel, Checkbox } from 'react-toolbox'
+import List from '../List'
 
 export default () => (
   <Panel className={style.panel}>
     <Chip />
-    <h1>Main Content 0</h1>
-    <p>
-      Main content goes here.
-    </p>
-    <Checkbox label='Pin drawer' checked />
-    <Checkbox label='Show sidebar' checked />
+    <List />
   </Panel>
 )
