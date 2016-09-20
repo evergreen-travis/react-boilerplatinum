@@ -16,8 +16,7 @@ import Panel from '../Panel'
 
 class App extends Component {
   state = {
-    menuActive: true,
-    menuFilterOpen: false
+    drawerActive: window.innerWidth === 1280
   }
 
   toggle = (key) => {
@@ -27,17 +26,15 @@ class App extends Component {
     }
   }
 
-  get = (key) => {
-    return this.state[key]
-  }
+  get = (key) => this.state[key]
 
   render () {
     const { toggle, get } = this
 
     return (
       <Layout className={style.app}>
-        <NavDrawer />
-        <AppBar />
+        <NavDrawer get={get} />
+        <AppBar toggle={toggle} />
         <Panel />
       </Layout>
     )
