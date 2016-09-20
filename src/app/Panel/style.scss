@@ -1,6 +1,13 @@
-@import '~react-toolbox/lib/globals'; // colors, globals, mixins, normalize
+@import '~react-toolbox/lib/globals';
 @import "~react-toolbox/lib/layout/config";
 
 .panel {
+  // TODO: Extract on variables
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.35s;
+  transition-property: padding;
+}
+
+.panelDesktop {
   padding-left: $navigation-drawer-desktop-width;
 }

@@ -14,9 +14,25 @@ import Panel from '../Panel'
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 
+function isDesktop () {
+  return window.innerWidth >= 1280
+}
+
 class App extends Component {
   state = {
-    drawerActive: window.innerWidth === 1280
+    drawerActive: isDesktop()
+  }
+
+  handleResize = () => {
+    this.setState({drawerActive: isDesktop()})
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  componentWillUnmount = () => {
+    window.addEventListener('resize', this.handleResize)
   }
 
   toggle = (key) => {
@@ -35,7 +51,7 @@ class App extends Component {
       <Layout className={style.app}>
         <NavDrawer get={get} />
         <AppBar toggle={toggle} />
-        <Panel />
+        <Panel get={get} />
       </Layout>
     )
   }
