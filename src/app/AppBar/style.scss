@@ -1,0 +1,23 @@
+@import '~react-toolbox/lib/globals';
+@import '~react-toolbox/lib/colors';
+@import "~react-toolbox/lib/button/config";
+
+
+.appBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  flex-grow: 1;
+  color: $color-white;
+
+  > input,
+  > span {
+    color: $button-neutral-color-hover;
+    &:focus {
+      color: $color-white;
+    }
+  }
+}

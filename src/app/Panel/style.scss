@@ -1,0 +1,6 @@
+@import '~react-toolbox/lib/globals'; // colors, globals, mixins, normalize
+@import "~react-toolbox/lib/layout/config";
+
+.panel {
+  padding-left: $navigation-drawer-desktop-width;
+}

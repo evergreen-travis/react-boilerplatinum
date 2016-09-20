@@ -1,7 +1,6 @@
 @import '~react-toolbox/lib/commons'; // colors, globals, mixins, normalize
-@import "~react-toolbox/components/app_bar/config";
-@import "~react-toolbox/components/button/config";
-@import "~react-toolbox/components/layout/config";
+@import "~react-toolbox/lib/app_bar/config";
+@import "~react-toolbox/lib/button/config";
 @import "./config";
 
 .app {
@@ -11,40 +10,4 @@
 
 .appbar {
   justify-content: space-between;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.search {
-  flex-grow: 1;
-  color: white;
-
-  > input,
-  > span {
-    color: $button-neutral-color-hover;
-    &:focus {
-      color: $color-white;
-    }
-  }
-}
-
-.menu {
-  position: fixed;
-  top: $appbar-height;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  transition: transform $animation-duration $animation-curve-default;
-  z-index: $z-index-high;
-}
-
-.panel {
-  padding-left: $navigation-drawer-desktop-width;
 }
