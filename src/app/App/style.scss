@@ -1,9 +1,8 @@
 @import '~react-toolbox/lib/commons'; // colors, globals, mixins, normalize
 @import "~react-toolbox/components/app_bar/config";
 @import "~react-toolbox/components/button/config";
+@import "~react-toolbox/components/layout/config";
 @import "./config";
-
-$offset: 1.8 * $unit;
 
 .app {
   @include no-webkit-scrollbar;
@@ -34,22 +33,18 @@ $offset: 1.8 * $unit;
 }
 
 .menu {
-  z-index: $z-index-higher;
-  display: flex;
-  min-height: $appbar-height;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  // box-shadow: $appbar-shadow;
   position: fixed;
   top: $appbar-height;
   bottom: 0;
   left: 0;
-  z-index: $z-index-high;
-  box-shadow: $documentation-left-shadow;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
   transition: transform $animation-duration $animation-curve-default;
+  z-index: $z-index-high;
 }
 
-.main {
-  padding-left: 35rem;
+.panel {
+  padding-left: $navigation-drawer-desktop-width;
 }

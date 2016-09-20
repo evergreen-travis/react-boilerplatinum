@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import { Sidebar, Input, BottomNavigationItem, BottomNavigation, Checkbox, AppBar, IconButton, Panel, NavDrawer, Layout } from 'react-toolbox'
-import { Flex, Box } from 'reflexbox'
+import { Panel, Layout, NavDrawer, AppBar, IconButton, Input, Checkbox, Sidebar } from 'react-toolbox'
 
 import Logo from '../Logo'
-
 import style from './style'
 
 // If you use React Router, make this component
@@ -35,20 +33,12 @@ class App extends Component {
 
     return (
       <Layout className={style.app}>
-        <NavDrawer
-          className={style.menu}
-          active
-          pinned
-          permanentAt='xxxl'>
+        <NavDrawer className={style.menu} pinned>
           <p>
             Navigation, account switcher, etc. go here.
           </p>
         </NavDrawer>
-        <AppBar
-          className={style.center}
-          fixed
-          flat
-          center>
+        <AppBar className={style.center} fixed flat>
           <IconButton icon='menu' inverse={true} />
           <Input
             className={style.search}
@@ -57,16 +47,14 @@ class App extends Component {
             icon='search' />
           <IconButton icon='filter_list' inverse={true} />
         </AppBar>
-        <article className={style.main}>
-          <section>
-            <h1>Main Content 0</h1>
-            <p>
-              Main content goes here.
-            </p>
-            <Checkbox label='Pin drawer' checked={this.state.drawerPinned} onChange={this.toggleDrawerPinned} />
-            <Checkbox label='Show sidebar' checked={this.state.sidebarPinned} onChange={this.toggleSidebar} />
-          </section>
-        </article>
+        <Panel className={style.panel}>
+          <h1>Main Content 0</h1>
+          <p>
+            Main content goes here.
+          </p>
+          <Checkbox label='Pin drawer' checked={this.state.drawerPinned} onChange={this.toggleDrawerPinned} />
+          <Checkbox label='Show sidebar' checked={this.state.sidebarPinned} onChange={this.toggleSidebar} />
+        </Panel>
         <Sidebar pinned={this.state.sidebarPinned} width={5}>
           <header>
             <IconButton icon='close' onClick={this.toggleSidebar} />
