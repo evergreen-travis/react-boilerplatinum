@@ -1,0 +1,21 @@
+@import '~react-toolbox/lib/globals';
+@import '~react-toolbox/lib/colors';
+@import "~react-toolbox/lib/button/config";
+
+.input {
+  flex-basis: 80rem;
+  padding: 0.25rem;
+  background: rgba(255,255,255,.15);
+
+  border-radius: 2px;
+  min-width: 144px;
+
+  > input {
+    color: $color-white;
+    border-bottom: none;
+  }
+}
+
+.bar {
+  display: none;
+}

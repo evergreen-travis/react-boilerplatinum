@@ -1,15 +1,17 @@
 import React from 'react'
-import style from './style'
-import { AppBar, IconButton, Input } from 'react-toolbox'
+import classnames from 'classnames'
+import { AppBar, IconButton } from 'react-toolbox'
 
-export default ({toggle}) => (
-  <AppBar className={style.appBar} fixed flat>
-    <IconButton icon='menu' inverse onClick={toggle('drawerActive')} />
-    <Input
-      className={style.input}
-      type='text'
-      name='search'
-      icon='search' />
-    <IconButton icon='filter_list' inverse />
-  </AppBar>
-)
+import InputSearch from '../InputSearch'
+import theme from './theme'
+import style from './style'
+
+export default ({toggle, get, set}) => {
+  return (
+    <AppBar style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }} theme={theme} fixed>
+      <IconButton icon='menu' inverse onClick={toggle('drawerActive')} />
+      <InputSearch toggle={toggle} get={get} set={set} />
+      <IconButton icon='filter_list' inverse />
+    </AppBar>
+  )
+}

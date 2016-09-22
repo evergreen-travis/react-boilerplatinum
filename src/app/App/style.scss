@@ -6,4 +6,5 @@
 .app {
   @include no-webkit-scrollbar;
   padding: ($appbar-height + 2) $offset $offset;
+  height: 100vh;
 }

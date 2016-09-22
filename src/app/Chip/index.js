@@ -1,8 +1,9 @@
 import React from 'react'
 import { Chip, Avatar } from 'react-toolbox'
+
 import style from './style'
 
-export default () => (
+export default ({toggle, get, set}) => (
   <header className={style.chip}>
     <Chip deletable>
       <Avatar style={{backgroundColor: 'deepskyblue'}} title='P' /><span>provider:totalwind</span>

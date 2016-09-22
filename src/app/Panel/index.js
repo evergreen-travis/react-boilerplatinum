@@ -1,20 +1,13 @@
 import React from 'react'
-import classnames from 'classnames'
 import { Panel } from 'react-toolbox'
 
-import style from './style'
 import Chip from '../Chip'
 import List from '../List'
+import theme from './style'
 
-export default ({get}) => {
-  const classes = classnames(style.panel, {
-    [style.panelDesktop]: get('drawerActive')
-  })
-
-  return (
-    <Panel className={classes}>
-      <Chip />
-      <List />
-    </Panel>
-  )
-}
+export default ({toggle, get, set}) => (
+  <Panel theme={theme}>
+    <Chip />
+    <List />
+  </Panel>
+)

@@ -1,9 +1,10 @@
 import React from 'react'
-import style from './style'
 import { NavDrawer } from 'react-toolbox'
 
-export default ({get}) => (
-  <NavDrawer className={style.navDrawer} active={get('drawerActive')} pinned={get('drawerActive')}>
+import style from './style'
+
+export default ({toggle, get, set}) => (
+  <NavDrawer active={get('drawerActive')} className={style.panel}>
     <p>
       Navigation, account switcher, etc. go here.
     </p>

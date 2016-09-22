@@ -1,13 +1,7 @@
-@import '~react-toolbox/lib/globals';
-@import "~react-toolbox/lib/layout/config";
-
 .panel {
+  justify-content: flex-start !important;
   // TODO: Extract on variables
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.35s;
   transition-property: padding;
-}
-
-.panelDesktop {
-  padding-left: $navigation-drawer-desktop-width;
 }
