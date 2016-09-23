@@ -20,7 +20,7 @@ $color-input-background: rgba(255,255,255,.15);
 .inputElement {
   color: $color-white;
   border-bottom: none;
-  padding-left: 57px;
+  padding-left: 45px;
 
   &:focus:not([disabled]):not([readonly]) {
     color: $color-input-focus;
@@ -39,5 +39,5 @@ $color-input-background: rgba(255,255,255,.15);
   color: $color-input;
 
   top: -2px;
-  left: 5px;
+  left: 2px;
 }
