@@ -10,12 +10,13 @@
 
   border-radius: 2px;
   min-width: 144px;
-  padding-left: 70px;
+
 }
 
 .inputElement {
   color: $color-white;
   border-bottom: none;
+  padding-left: 57px;
 }
 
 .bar {
@@ -26,5 +27,5 @@
   color: $color-white;
 
   top: -4px;
-  left: 14px;
+  left: 5px;
 }
