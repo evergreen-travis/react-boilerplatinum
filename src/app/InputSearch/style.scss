@@ -2,11 +2,15 @@
 @import '~react-toolbox/lib/colors';
 @import "~react-toolbox/lib/button/config";
 
+$color-input: rgba(255,255,255,.55);
+$color-input-focus: $color-white;
+$color-input-background: rgba(255,255,255,.15);
+
 .input {
-  margin: 0 4vh !important;
+  margin: 0 5vh !important;
   flex-basis: 80rem;
-  padding: 0.25rem;
-  background: rgba(255,255,255,.15);
+  padding: 4px;
+  background: $color-input-background;
 
   border-radius: 2px;
   min-width: 144px;
@@ -17,6 +21,14 @@
   color: $color-white;
   border-bottom: none;
   padding-left: 57px;
+
+  &:focus:not([disabled]):not([readonly]) {
+    color: $color-input-focus;
+
+    ~ .icon {
+      color: $color-input-focus;
+    }
+  }
 }
 
 .bar {
@@ -24,8 +36,8 @@
 }
 
 .icon {
-  color: $color-white;
+  color: $color-input;
 
-  top: -4px;
+  top: -2px;
   left: 5px;
 }
