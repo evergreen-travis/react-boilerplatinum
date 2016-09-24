@@ -12,7 +12,7 @@ export default ({toggle, get, set}) => {
       type='text'
       name='search'
       icon='search'
-      placeholder='Board, model, price, ...'
+      placeholder='Board, model, price,...'
       onFocus={onFocus}
       onBlur={onBlur} />
   )
