@@ -14,7 +14,7 @@ import Panel from '../Panel'
 // You can ignore this warning. For details, see:
 // https://github.com/reactjs/react-router/issues/2182
 
-class App extends Component {
+export default class App extends Component {
   state = {
     drawerActive: false,
     searchFocus: false
@@ -43,5 +43,3 @@ class App extends Component {
     )
   }
 }
-
-export default App

@@ -1,3 +1,39 @@
+<a name="0.3.4"></a>
+## 0.3.4 (2016-09-25)
+
+* Add missin dep ([6d6dadc](https://github.com/Kikobeats/react-boilerplatinum/commit/6d6dadc))
+* Update docs ([e1b8684](https://github.com/Kikobeats/react-boilerplatinum/commit/e1b8684))
+
+
+
+<a name="0.3.3"></a>
+## 0.3.3 (2016-09-24)
+
+* Fix deps ([d55d727](https://github.com/Kikobeats/react-boilerplatinum/commit/d55d727))
+* Release 0.3.2 ([e8f8c8c](https://github.com/Kikobeats/react-boilerplatinum/commit/e8f8c8c))
+* Use default components ([b57f478](https://github.com/Kikobeats/react-boilerplatinum/commit/b57f478))
+
+
+
+<a name="0.3.2"></a>
+## 0.3.2 (2016-09-24)
+
+* Fix deps ([d55d727](https://github.com/Kikobeats/react-boilerplatinum/commit/d55d727))
+* Use default components ([b57f478](https://github.com/Kikobeats/react-boilerplatinum/commit/b57f478))
+
+
+
+<a name="0.3.1"></a>
+## 0.3.1 (2016-09-24)
+
+* Add html minification rules ([8a893f1](https://github.com/Kikobeats/react-boilerplatinum/commit/8a893f1))
+* Add plugin ([3328d44](https://github.com/Kikobeats/react-boilerplatinum/commit/3328d44))
+* Basic scaffold ([b1549de](https://github.com/Kikobeats/react-boilerplatinum/commit/b1549de))
+* Load styles ([f0de70a](https://github.com/Kikobeats/react-boilerplatinum/commit/f0de70a))
+* Update presets ([36f9ee0](https://github.com/Kikobeats/react-boilerplatinum/commit/36f9ee0))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2016-09-17)
 
